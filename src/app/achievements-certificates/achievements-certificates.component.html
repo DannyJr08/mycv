@@ -1,0 +1,8 @@
+<section>
+    <h2>Certifications</h2>
+    <div *ngFor="let certificacion of certificaciones;" class="centrar">
+        <h3>{{certificacion.nombre}} - {{certificacion.institucion}}</h3>
+        <p>{{certificacion.fecha}}</p>
+        <a *ngIf="certificacion.id || certificacion.liga" href="{{certificacion.liga}}">{{certificacion.id}}</a>
+    </div>
+</section>

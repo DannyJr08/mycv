@@ -1,0 +1,14 @@
+.intereses, .intereses div {
+    display: flex;
+}
+
+div {
+    align-items: center;
+    border-right: 1px solid black;
+    margin-right: 0.1rem;
+    padding: 1rem;
+}
+
+.intereses div:last-of-type {
+    border-right: none;
+}

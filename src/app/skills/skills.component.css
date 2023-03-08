@@ -1,0 +1,58 @@
+.habilidades {
+    margin-bottom: 4rem;
+}
+
+.habilidadesDuras,
+.habilidadesSuaves,
+.habilidadesDuras div,
+.habilidadesSuaves div {
+    display: flex;
+}
+
+.lenguajes, .herramientas {
+    width: 55rem;
+    margin-right: auto;
+}
+
+.lenguajes {
+    margin-left: 1rem;
+}
+
+.herramientas {
+    margin-left: 3rem;
+}
+
+.lenguajes div {
+    display: inline-block;
+    width: 17rem;
+}
+
+.herramientas div {
+    display: inline-block;
+    width: 12rem;
+}
+
+div {
+    align-items: center;
+    border-right: 1px solid black;
+    margin-right: 0.1rem;
+}
+
+.lenguajes div, .herramientas div {
+    border-left: 1px solid black;
+    margin-right: 0;
+}
+
+.habilidadesSuaves div {
+    padding: 1rem;
+}
+
+.habilidadesSuaves div:nth-child(4) {
+    padding: 0;
+    margin: 0;
+}
+
+.habilidadesDuras div:last-of-type,
+.habilidadesSuaves div:last-of-type {
+    border-right: none;
+}

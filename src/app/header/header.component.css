@@ -1,0 +1,23 @@
+td:first-child {
+    border-right: 0.1rem solid black;
+}
+
+td {
+    width: 50%;
+}
+
+ul {
+    margin-right: 4rem;
+}
+
+.encabezado__tabla {
+    border-top: 0.1rem solid black;
+    border-bottom: 0.1rem solid black;
+}
+
+.encabezado__redes-sociales {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    margin: 2rem auto;
+}

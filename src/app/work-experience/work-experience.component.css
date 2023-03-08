@@ -1,0 +1,10 @@
+section {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.repsoitorios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

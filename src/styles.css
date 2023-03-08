@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import '~normalize.css'; /* Para que la aplicación web se vea igual en todos los navegadores web */
+
+:root {
+    --azulTec: #14167E;
+}
+
+/* Para la responsividad de la aplicación web. */
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 16px;
+}
+
+table {
+    width: 100%;
+    border: none;
+}
+
+h1, h2, h3 {
+    font-family: 'Shantell Sans', sans-serif;
+}
+
+h2, h3 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+p {
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: black;
+}
+
+.centrar {
+    text-align: center;
+    justify-content: center;
+}

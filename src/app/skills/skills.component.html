@@ -1,0 +1,23 @@
+<section>
+    <h2>Skills</h2>
+    <section class="habilidades habilidadesDuras">
+        <div *ngFor="let hardSkill of hardSkills;">
+            <p>{{hardSkill}}</p>
+        </div>
+    </section>
+    <section class="habilidades lenguajes">
+        <div *ngFor="let lenguaje of lenguajesProgra;">
+            <p>{{lenguaje}}</p>
+        </div>
+    </section>
+    <section class="habilidades herramientas">
+        <div *ngFor="let herramienta of herramientasProgra;">
+            <p>{{herramienta}}</p>
+        </div>
+    </section>
+    <section class="habilidades habilidadesSuaves">
+        <div *ngFor="let softSkill of softSkills;">
+            <p>{{softSkill}}</p>
+        </div>
+    </section>
+</section>
