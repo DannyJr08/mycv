@@ -10,26 +10,31 @@ on:
   pull_request:
     branches: [ "main" ]
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  deployment:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+            - name: Obtener repositorio
+              uses: actions/checkout@v3
+              with:
+                fetch-depth: 0
+            - name: Instalar NodeJS
+              uses: actions/setup-node@v3
+              with:
+                node-version: 16.18.1
+            - name: Verificar instalación NodeJS
+              run: node -v
+            - name: Instalar Angular CLI
+              run: npm install -g @angular/cli@15.1.6
+            - name: Instalar dependencias
+              run: npm ci
+            - name: Verificar instalación Angular CLI y TypeScript
+              run: ng version
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: ng build
-        
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.4.1
-        with:
-          folder: dist # The folder the action should deploy.
+            - name: Build
+              run: ng build
+
+            - name: Deploy 🚀
+              uses: JamesIves/github-pages-deploy-action@v4.4.1
+              with:
+                folder: dist # The folder the action should deploy.
